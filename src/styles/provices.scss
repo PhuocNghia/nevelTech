@@ -1,0 +1,51 @@
+@import "global.scss";
+.providers-section {
+  margin-top: 40px;
+  @include sp {
+    margin-top: 24px;
+  }
+  .swiper-wrapper {
+    justify-content: center;
+    @include sp {
+      justify-content: start;
+    }
+  }
+  .swiper-slide {
+    width: 156px;
+    @include sp {
+      width: 120px;
+      margin-right: 6px !important;
+    }
+    a {
+      display: block;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #12294A;
+      text-align: center;
+      .providers-logo {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 68px;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .providers-cnt {
+        background: #1D3353;
+        color: #fff;
+        padding: 10px 10px 8px;
+        span {
+          font-size: 13px;
+          text-decoration: underline;
+          &.number {
+            color: #90A2BD;
+          }
+        }
+      }
+    }
+  }
+}

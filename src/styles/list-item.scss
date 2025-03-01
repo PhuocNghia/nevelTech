@@ -1,0 +1,47 @@
+@import "global.scss";
+.list-item {
+  margin-top: 80px;
+  @include sp {
+    margin-top: 0;
+  }
+  .list-item-inner {
+    display: flex;
+    gap: 16px;
+    @include sp {
+      gap: 6px;
+    }
+    a {
+      display: flex;
+      width: 197px;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      color: #fff;
+      gap: 13px;
+      height: 57px;
+      &:first-child {
+        display: none;
+        @include sp {
+          display: flex;
+        }
+      }
+      @include sp {
+        display: none;
+        font-size: 14px;
+        gap: 5px;
+        .icon {
+          position: relative;
+          top: 2px;
+        }
+      }
+    }
+    .custom-items {
+      background: #12294A;
+      @include sp {
+        display: flex;
+        background-color: transparent;
+      }
+    }
+  }
+}

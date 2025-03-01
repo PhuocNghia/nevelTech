@@ -1,0 +1,47 @@
+/* ✅ Reset tất cả margin, padding và box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ✅ Reset các thẻ block */
+  body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ✅ Đặt font chữ mặc định */
+  body {
+    font-family: var(--font-inter), sans-serif;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* ✅ Reset danh sách */
+  ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ✅ Reset thẻ liên kết */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* ✅ Reset button */
+  button {
+    all: unset;
+    cursor: pointer;
+  }
+  
+  /* ✅ Reset form input */
+  input, textarea, select, button {
+    font: inherit;
+    border: none;
+    outline: none;
+  }
+  

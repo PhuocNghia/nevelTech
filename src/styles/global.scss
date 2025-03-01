@@ -1,0 +1,79 @@
+@import "reset.scss";
+$primary-color: #01AF70;
+$secondary-color: #FF0960;
+$third-color: #12294A;
+$background-color: #03193A;
+$text-color: #fff;
+
+// Breakpoints
+$mobile: 640px;
+
+// Mixin
+@mixin sp {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+body {
+  font-family: var(--font-jost), sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+}
+main {
+  @include sp {
+    width: 100vw;
+    overflow: hidden;
+  }
+}
+.container {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  @include sp {
+    padding: 0 16px;
+  }
+}
+.d-flex {
+  display: flex;
+}
+.section-ttl {
+  color: $text-color;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 32px;
+  @include sp {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+}
+.all-btn {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  padding-right: 26px;
+  background: url(/assets/all-icon.svg) no-repeat center right;
+  position: absolute;
+  top: 12px;
+  right: 0;
+  background-size: 16px auto;
+  @include sp {
+    top: 0;
+    right: 16px;
+    text-indent: -9999px
+  }
+}
+.pc_display {
+  display: block;
+  @include sp {
+    display: none;
+  }
+}
+.sp_display {
+  display: none;
+  @include sp {
+    display: block;
+  }
+}

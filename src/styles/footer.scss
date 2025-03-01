@@ -1,0 +1,151 @@
+@import "global.scss";
+.footer {
+  background: #12294A;
+  margin-top: 40px;
+  padding: 60px 0;
+  color: #fff;
+  font-weight: 500;
+  @include sp {
+    padding: 40px 0;
+  }
+  .footer-inner {
+    justify-content: space-between;
+    @include sp {
+      flex-wrap: wrap;
+      > div {
+        width: 100%;
+      }
+      .footer-2 {
+        order: 1;
+      }
+      .footer-3 {
+        order: 2;
+      }
+      .footer-4 {
+        order: 3;
+      }
+      .footer-1 {
+        order: 4;
+        width: 100%;
+      }
+      .footer-5 {
+        order: 5;
+        margin-top: 16px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .footer-link {
+        h3 {
+          font-size: 15px;
+          padding: 13px 15px;
+          background: #1A3157 url(/assets/expand.svg) no-repeat center right 15px;
+          border-radius: 10px;
+        }
+        ul {
+          display: none;
+          padding: 0 20px 20px;
+          &.active {
+            display: block;
+          }
+        }
+      }
+    }
+    .footer-1 {
+      display: flex;
+      flex-wrap: wrap;
+      > div {
+        width: 100%;
+      }
+      .help-inner {
+        position: relative;
+        h3 {
+          font-size: 24px;
+          margin-bottom: 8px;
+        }
+        p {
+          font-size: 15px;
+          color: #90A2BD;
+          margin-bottom: 16px;
+        }
+        a {
+          display: block;
+          border-radius: 10px;
+          width: 200px;
+          height: 40px;
+          line-height: 40px;
+          background: #3555FF;
+          text-align: center;
+          font-size: 13px;
+          text-transform: uppercase;
+        }
+        @include sp {
+          background: #1A3157;
+          order: 2;
+          padding: 18px 24px;
+          border-radius: 10px;
+          margin-top: 50px;
+          h3 {
+            font-size: 15px;
+            margin-bottom: 0;
+          }
+          p {
+            font-size: 13px;
+            margin-bottom: 0;
+          }
+          a {
+            position: absolute;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 116px;
+            font-size: 13px;
+          }
+        }
+      }
+      .list-social {
+        display: flex;
+        gap: 24px;
+        a {
+          display: inline;
+          background: transparent;
+        }
+        @include sp {
+          width: 100%;
+          position: relative;
+          order: 1;
+          flex-wrap: wrap;
+          justify-content: center;
+          &:before {
+            content: 'Follow Us';
+            display: block;
+            text-align: center;
+            margin-bottom: 2px;
+            margin-top: 36px;
+            font-size: 15px;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .footer-link {
+      h3 {
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      li {
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        a {
+          font-size: 15px;
+          font-weight: normal;
+          color: #90A2BD;
+        }
+      }
+    }
+  }
+}

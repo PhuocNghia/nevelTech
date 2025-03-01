@@ -1,0 +1,107 @@
+@import "global.scss";
+.header {
+  border-bottom: 1px solid #0f2444;
+  position: relative;
+  z-index: 99;
+  .hd-inner {
+    justify-content: space-between;
+    .hd-lft {
+      @include sp {
+        width: 30%;
+      }
+      .hd-logo {
+        padding: 13px 0;
+        margin-right: 56px;
+        width: 100%;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        @include sp {
+          margin: 0;
+        }
+        .menu-btn {
+          position: relative;
+          top: 4px;
+          margin-right: 6px;
+          @include sp {
+            display: block;
+            width: 28px;
+            height: 28px;
+            top: -4px;
+            margin-right: 0;
+          }
+        }
+      }
+      .nav {
+        align-items: center;
+        gap: 34px;
+        @include sp {
+          display: none;
+        }
+        .menu {
+          gap: 26px;
+          li {
+            list-style: none;
+            a {
+              text-decoration: none;
+              font-weight: 500;
+              font-size: 14px;
+              text-transform: uppercase;
+              color: #CAD3E1;
+            }
+          }
+        }
+      }
+    }
+    .user-func {
+      gap: 7px;
+      align-items: center;
+      > a {
+        display: inline-block;
+        padding: 7px 15px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #fff;
+        text-transform: uppercase;
+        height: 34px;
+      }
+      .login-btn {
+        background: #12294A;
+      }
+      .register-btn {
+        background: #01AF70;
+      }
+    }
+  }
+  .sp-menu {
+    background: #1c304e;
+    display: block;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    &.active {
+      max-height: 100vh;
+      opacity: 1;
+      visibility: visible;
+    }
+    li {
+      display: block;
+      border-bottom: 1px solid #0f2444;
+      &:last-child {
+        border-bottom: none;
+      }
+      a {
+        display: block;
+        padding: 10px;
+        color: #fff;
+      }
+    }
+  }
+}
